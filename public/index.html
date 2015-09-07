@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Headers</title>
+</head>
+<body>
+    <h1>This is the request headers received from the client</h1>
+    <pre id="output"></pre>
+    <script>
+        fetch('/headers').then(function(res){
+            return res.json()
+        }).then(function(json){
+            output.innerHTML = JSON.stringify(json, null, 2);
+        });
+    </script>
+</body>
+</html>
